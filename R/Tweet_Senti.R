@@ -82,7 +82,8 @@ df_tweets$sentiment <- preds_tweets
  samp_ind <- sample(c(1:nrow(df_tweets)), nrow(df_tweets) * 0.1) # 10% for labeling
 #
 # # plotting
-plt <-  ggplot(df_tweets, aes(x = created, y = sentiment, color = sentiment)) +
+#plt <- 
+  ggplot(df_tweets, aes(x = created, y = sentiment, color = sentiment)) +
    theme_minimal() +
    scale_color_gradientn(colors = cols, limits = c(0, 1),
                          breaks = seq(0, 1, by = 1/4),
@@ -108,6 +109,6 @@ plt <-  ggplot(df_tweets, aes(x = created, y = sentiment, color = sentiment)) +
          axis.text.x = element_text(size = 8, face = "bold", color = 'black')) +
    ggtitle("Tweets Sentiment rate (probability of positiveness)")
 
-return(plt)
+#return(plt)
 
 }
