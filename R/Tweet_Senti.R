@@ -15,35 +15,35 @@
 # setwd("D:/Qlikview/RestApi/")
 # rm(list=ls())
 
-# loading packages
-library(twitteR)
-library(ROAuth)
-library(tidyverse)
-library(text2vec)
-library(caret)
-library(glmnet)
-library(ggrepel)
-#library(purrrlyr, lib.loc = "library/")
-#library(purrrlyr)
-
-##### Vectorization #####
-# define preprocessing function and tokenization function
-prep_fun <- tolower
-tok_fun <- word_tokenizer
-
-# Load Pretrained Model
-
-load("vocab.RData")
-vectorizer <- vocab_vectorizer(vocab)
-
-# define tf-idf model
-
-tfidf <- TfIdf$new()
-
-
-load("data/df_tweet.RData")
-
 tweet_senti <- function (df_tweets) {
+
+  # loading packages
+  library(twitteR)
+  library(ROAuth)
+  library(tidyverse)
+  library(text2vec)
+  library(caret)
+  library(glmnet)
+  library(ggrepel)
+  #library(purrrlyr, lib.loc = "library/")
+  #library(purrrlyr)
+
+  ##### Vectorization #####
+  # define preprocessing function and tokenization function
+  prep_fun <- tolower
+  tok_fun <- word_tokenizer
+
+  # Load Pretrained Model
+
+  load("vocab.RData")
+  vectorizer <- vocab_vectorizer(vocab)
+
+  # define tf-idf model
+
+  tfidf <- TfIdf$new()
+
+
+  load("data/df_tweet.RData")
 
 # preprocessing and tokenization
 it_tweets <- itoken(df_tweets$text,
