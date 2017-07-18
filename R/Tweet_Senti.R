@@ -16,14 +16,14 @@
 # rm(list=ls())
 
 # loading packages
-#library(twitteR)
-#library(ROAuth)
-#library(tidyverse)
-#library(text2vec)
-#library(caret)
-#library(glmnet)
+library(twitteR)
+library(ROAuth)
+library(tidyverse)
+library(text2vec)
+library(caret)
+library(glmnet)
 library(ggrepel)
-library(purrrlyr, lib.loc = "library/")
+#library(purrrlyr, lib.loc = "library/")
 #library(purrrlyr)
 
 ### loading and preprocessing a training set of tweets
