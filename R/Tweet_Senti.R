@@ -71,7 +71,7 @@ preds_tweets <- predict(glmnet_classifier, dtm_tweets_tfidf, type = 'response')[
 # adding rates to initial dataset
 df_tweets$sentiment <- preds_tweets
 
-return(df_tweets)
+#return(df_tweets)
 
 #write.csv(df_tweets,"tweet_sentiment.csv",row.names = FALSE)
 
@@ -82,7 +82,7 @@ return(df_tweets)
  samp_ind <- sample(c(1:nrow(df_tweets)), nrow(df_tweets) * 0.1) # 10% for labeling
 #
 # # plotting
- ggplot(df_tweets, aes(x = created, y = sentiment, color = sentiment)) +
+plt <-  ggplot(df_tweets, aes(x = created, y = sentiment, color = sentiment)) +
    theme_minimal() +
    scale_color_gradientn(colors = cols, limits = c(0, 1),
                          breaks = seq(0, 1, by = 1/4),
@@ -108,5 +108,6 @@ return(df_tweets)
          axis.text.x = element_text(size = 8, face = "bold", color = 'black')) +
    ggtitle("Tweets Sentiment rate (probability of positiveness)")
 
+return(plt)
 
 }
