@@ -35,7 +35,7 @@ tweet_senti <- function (df_tweets) {
 
 # Load Pretrained Model
 
- # load("vocab.RData")
+ #load("vocab.RData")
   vectorizer <- vocab_vectorizer(vocab)
 
 # define tf-idf model
@@ -63,6 +63,7 @@ dtm_tweets_tfidf <- fit_transform(dtm_tweets, tfidf)
 
 # loading classification model
 #glmnet_classifier <- readRDS('data/glmnet_classifier.RDS')
+#save(glmnet_classifier,file="glmnet_classifier.RData")
 
 # predict probabilities of positiveness
 preds_tweets <- predict(glmnet_classifier, dtm_tweets_tfidf, type = 'response')[ ,1]
