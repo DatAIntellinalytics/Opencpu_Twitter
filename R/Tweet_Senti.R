@@ -45,5 +45,5 @@ load("data/df_tweet.RData")
 
 return(df_tweets)
 
-
+ 
 }
