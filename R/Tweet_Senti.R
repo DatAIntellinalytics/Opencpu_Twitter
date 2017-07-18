@@ -35,7 +35,7 @@ tweet_senti <- function (df_tweets) {
 
   # Load Pretrained Model
 
-  load("vocab.RData")
+load("data/df_tweet.RData")
   vectorizer <- vocab_vectorizer(vocab)
 
   # define tf-idf model
