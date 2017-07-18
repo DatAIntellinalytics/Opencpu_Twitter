@@ -74,7 +74,7 @@ df_tweets$sentiment <- preds_tweets
 return(df_tweets)
 
 #write.csv(df_tweets,"tweet_sentiment.csv",row.names = FALSE)
-
+ 
 # color palette
 # cols <- c("#ce472e", "#f05336", "#ffd73e", "#eec73a", "#4ab04a")
 #
