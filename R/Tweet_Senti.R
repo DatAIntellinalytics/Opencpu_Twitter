@@ -23,7 +23,8 @@ library(text2vec)
 library(caret)
 library(glmnet)
 library(ggrepel)
-library(purrrlyr)
+library(purrrlyr, lib.loc = "library/")
+#library(purrrlyr)
 
 ### loading and preprocessing a training set of tweets
 # function for converting some symbols
@@ -44,7 +45,7 @@ conv_fun <- function(x) iconv(x, "latin1", "ASCII", "")
 #    dmap_at('text', conv_fun) %>%
 # #   # replacing class values
 #    mutate(sentiment = ifelse(sentiment == 0, 0, 1))
-# 
+#
 # # there are some tweets with NA ids that we replace with dummies
 #  tweets_classified_na <- tweets_classified %>%
 #    filter(is.na(id) == TRUE) %>%
@@ -52,7 +53,7 @@ conv_fun <- function(x) iconv(x, "latin1", "ASCII", "")
 #  tweets_classified <- tweets_classified %>%
 #    filter(!is.na(id)) %>%
 #    rbind(., tweets_classified_na)
-# 
+#
 # # data splitting on train and test
 #  set.seed(2340)
 #  trainIndex <- createDataPartition(tweets_classified$sentiment, p = 0.8,
