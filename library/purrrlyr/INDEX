@@ -1,0 +1,4 @@
+by_row                  Apply a function to each row of a data frame
+by_slice                Apply a function to slices of a data frame
+dmap                    Map over the columns of a data frame
+slice_rows              Slice a data frame into groups of rows

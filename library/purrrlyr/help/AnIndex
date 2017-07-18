@@ -1,0 +1,10 @@
+%>%	pipe
+by_row	by_row
+by_slice	by_slice
+dmap	dmap
+dmap_at	dmap
+dmap_if	dmap
+invoke_rows	by_row
+map_rows	by_row
+slice_rows	slice_rows
+unslice	slice_rows
