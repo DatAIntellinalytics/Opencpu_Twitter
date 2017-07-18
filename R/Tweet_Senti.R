@@ -23,8 +23,8 @@ library(text2vec)
 library(caret)
 library(glmnet)
 library(ggrepel)
-library(purrrlyr, lib.loc = "library/")
-library(purrrlyr)
+#library(purrrlyr, lib.loc = "library/")
+#library(purrrlyr)
 
 ### loading and preprocessing a training set of tweets
 # function for converting some symbols
