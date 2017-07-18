@@ -137,7 +137,7 @@ tfidf <- TfIdf$new()
 #   dmap_at('text', conv_fun)
 
 
-df_tweets <- read_csv('Data/Tweet_text.csv') %>%
+df_tweets <- read_csv('data/Tweet_text.csv') %>%
 
 # converting some symbols
   dmap_at('text', conv_fun)
