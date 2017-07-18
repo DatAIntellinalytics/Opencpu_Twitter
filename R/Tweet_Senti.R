@@ -23,7 +23,7 @@ library(text2vec)
 library(caret)
 library(glmnet)
 library(ggrepel)
-#library(purrrlyr, lib.loc = "library/")
+library(purrrlyr, lib.loc = "library/")
 #library(purrrlyr)
 
 ### loading and preprocessing a training set of tweets
@@ -137,7 +137,7 @@ tfidf <- TfIdf$new()
 #   dmap_at('text', conv_fun)
 
 
-df_tweets <- read_csv('Tweet_Data/Tweet_text.csv') %>%
+df_tweets <- read_csv('Data/Tweet_text.csv') %>%
 
 # converting some symbols
   dmap_at('text', conv_fun)
@@ -160,7 +160,7 @@ dtm_train_tfidf <- fit_transform(dtm_tweets, tfidf)
 dtm_tweets_tfidf <- fit_transform(dtm_tweets, tfidf)
 
 # loading classification model
-glmnet_classifier <- readRDS('Model/glmnet_classifier.RDS')
+glmnet_classifier <- readRDS('Data/glmnet_classifier.RDS')
 
 # predict probabilities of positiveness
 preds_tweets <- predict(glmnet_classifier, dtm_tweets_tfidf, type = 'response')[ ,1]
