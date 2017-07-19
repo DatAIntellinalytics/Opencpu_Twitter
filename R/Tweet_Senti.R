@@ -15,14 +15,18 @@
 # setwd("D:/Qlikview/RestApi/")
 #rm(list=ls())
 
-
-binddata <- function(id,text,created){
-
-  return(data.frame(id,text,created))
-
-  print(df_tweets)
-
+printdata <- function(ddata){
+  print(ddata)
 }
+
+
+# binddata <- function(id,text,created){
+#
+#   return(data.frame(id,text,created))
+#
+#   print(df_tweets)
+#
+# }
 
 #df_tweets <- binddata(id,text,created)
 
