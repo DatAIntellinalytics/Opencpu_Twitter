@@ -18,7 +18,10 @@
 printdata <- function(ddata){
   ddata <- data.frame(ddata)
   print(ddata)
+  print(class(ddata))
+  plot(ddata)
 }
+
 
 
 # binddata <- function(id,text,created){
