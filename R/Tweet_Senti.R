@@ -53,7 +53,6 @@ tweet_senti <- function (df_tweets) {
   library(caret)
   library(glmnet)
   library(ggrepel)
-  library(plyr)
   library(dplyr)
   library(ggplot2)
   #library(purrrlyr, lib.loc = "library/")
