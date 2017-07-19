@@ -39,7 +39,7 @@
 tweet_senti <- function (df_tweets) {
 
   tweet_senti <- function (df_tweets) {
-    plot(ddataa)
+    plot(df_tweets)
 }
 
 }
