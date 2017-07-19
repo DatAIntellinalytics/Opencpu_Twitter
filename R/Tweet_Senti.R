@@ -44,7 +44,7 @@
 
 
 tweet_senti <- function (df_tweets) {
-
+df_tweets <- data.frame(df_tweets)
   print(str(df_tweets))
 
 }
