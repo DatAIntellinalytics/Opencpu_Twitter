@@ -44,7 +44,7 @@
 
 
 tweet_senti <- function (df_tweets) {
-  df_tweets <- data.frame(id,text,created)
+  df_tweets <- data.frame(df_tweets)
 df_tweets$id <- as.integer(df_tweets$id)
  df_tweets$text <- as.character(df_tweets$text)
   df_tweets$created <- as.character(df_tweets$created)
