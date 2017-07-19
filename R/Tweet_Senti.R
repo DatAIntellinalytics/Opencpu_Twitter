@@ -39,9 +39,7 @@
 tweet_senti <- function (df_tweets) {
 
   tweet_senti <- function (df_tweets) {
-  test <- null
-  ddataa <- cbind(df_tweets,test)
-  print(head(ddataa))
+    plot(ddataa)
 }
 
 }
