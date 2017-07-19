@@ -16,6 +16,7 @@
 #rm(list=ls())
 
 printdata <- function(ddata){
+  ddata <- data.frame(ddata)
   print(ddata)
 }
 
