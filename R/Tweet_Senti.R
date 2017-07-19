@@ -38,6 +38,6 @@
 
 tweet_senti <- function (df_tweets) {
 
-    plot(df_tweets)
+    return(plot(df_tweets))
 
 }
