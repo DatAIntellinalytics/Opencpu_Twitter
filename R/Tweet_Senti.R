@@ -99,7 +99,7 @@ df_tweets$sentiment <- preds_tweets
 # color palette
  cols <- c("#ce472e", "#f05336", "#ffd73e", "#eec73a", "#4ab04a")
 
- print(df_tweets)
+ print(df_tweets$sentiment)
 #
 #  set.seed(932)
 #  samp_ind <- sample(c(1:nrow(df_tweets)), nrow(df_tweets) * 0.1) # 10% for labeling
