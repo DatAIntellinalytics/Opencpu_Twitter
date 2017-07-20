@@ -122,7 +122,7 @@ ggplot(by.tweet, aes(created, number)) + geom_line(aes(group=score, color=score)
   geom_point(aes(group=score, color=score), size=4) +
   theme(text = element_text(size=18), axis.text.x = element_text(angle=90, vjust=1)) +
  #stat_summary(fun.y = 'sum', fun.ymin='sum', fun.ymax='sum', colour = 'yellow', size=2, geom = 'line') +
-  ggtitle('Humira')
+  ggtitle('Humira Twitter Sentiments')
 
 
 # #return(df_tweets)
