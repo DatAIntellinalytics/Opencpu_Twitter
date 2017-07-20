@@ -118,10 +118,11 @@ by.tweet <- group_by(df_tweets, score, created)
 by.tweet <- summarise(by.tweet, number=n())
 
 #chart
-ggplot(by.tweet, aes(created, number)) + geom_line(aes(group=score, color=score), size=2) +
+ggplot(by.tweet, aes(created, number)) + geom_line(aes(group=score, color=score), size=1) +
+  scale_x_date(date_breaks = "months",date_labels = ("%b-%y")) +
   geom_point(aes(group=score, color=score), size=4) +
-  theme(text = element_text(size=18), axis.text.x = element_text(angle=90, vjust=1)) +
- #stat_summary(fun.y = 'sum', fun.ymin='sum', fun.ymax='sum', colour = 'yellow', size=2, geom = 'line') +
+  theme(text = element_text(size=12), axis.text.x = element_text(angle=90, vjust=2)) +
+  labs(x = "Tweet Date") + labs(y = "Sentiment Score") + labs(colour = "Sentiment")+
   ggtitle('Humira Twitter Sentiments')
 
 
