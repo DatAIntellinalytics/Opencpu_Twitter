@@ -50,7 +50,7 @@ tweet_senti <- function (df_tweets) {
   library(ROAuth)
   library(tidyverse)
   library(text2vec)
-  library(caret)
+  #library(caret)
   library(glmnet)
   library(ggrepel)
   library(dplyr)
